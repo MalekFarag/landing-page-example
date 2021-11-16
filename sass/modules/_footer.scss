@@ -1,0 +1,108 @@
+.mainFooter{
+    margin-top: 60px;
+    padding-top: 60px;
+    // padding-bottom: 40px;
+
+    // width: 90%;
+
+    // border-top: solid 1px rgba(0, 0, 0, .9);
+    color: rgb(68, 0, 0);
+    font-weight: 700;
+    background-color: #e20f41;
+    order: 1;
+    .footCon{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around; 
+        flex-wrap: wrap;
+        padding-bottom: 80px;
+    }
+    
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        li{
+            margin-bottom: 22px;
+            font-size: 18px;
+        }
+
+        
+
+        .footerNav{
+                li{
+                    color: white;
+                    margin-bottom: 20px;
+                    padding-bottom: 1px;
+                    font-size: 16px;
+                    border-bottom: solid 2px #e20f41;
+                    width: max-content;
+                    
+
+                    transition: all .1s ease;
+
+                    &:hover{
+                        cursor: pointer;
+                        border-bottom: solid 2px white;
+                    }
+                }
+                
+        }
+        .socialNav{
+            li{
+                transition: all .1s ease;
+                color: white;
+                &:hover{
+                    cursor: pointer;
+                    opacity: .7;
+                }
+            }
+        }
+        li:last-child{
+            margin-bottom: 0px;
+        }
+
+        .copyright{
+            display: block;
+            width: 100%;
+            font-size: 11px;
+            color: white;
+            text-align: center;
+            margin: 40px auto;
+            // font-weight: lighter;
+        }
+}
+
+
+@media only screen and (min-width: 920px){
+    .mainFooter{
+
+        li{
+            font-size: 22px;
+        }
+        .footCon{
+            padding-bottom: 0;
+        //     li{
+        //     display: inline;
+        //     margin: 50px 25px;
+        //     padding-bottom: 3px;
+        // }
+        .socialNav{
+            transform: translateY(-5px);
+            margin-left: 60px;
+        }
+
+        // ul{
+        //     display: flex;
+        //     justify-content: space-between;
+        //     width: 100%;
+        // }
+        .footerNav,.socialNav{
+            max-width: 70%;
+        }
+        }
+    }
+    
+}

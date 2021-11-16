@@ -1,0 +1,26 @@
+.contactPage{
+    margin: 0 auto;
+
+
+    .subhead{
+        margin-top: 20px;
+        line-height: 20px;
+        font-size: 20px;
+    }
+    .lineDiv{
+        margin: 20px auto;
+        background-color: black;
+        width: 2px;
+        height: 150px;
+    }
+}
+
+
+@media only screen and (min-width: 920px){
+    .contactPage{
+        .headerLarge{
+            padding-top: 40px;
+        }
+    }
+}
+

@@ -1,0 +1,267 @@
+.mainHeader{
+    height: 55px;
+
+    box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.15);
+    background-color: white;
+
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    .logoDiv{
+        height: 55px;
+    }
+
+    .logo{
+        padding-top: 8px;
+        height: 38px; 
+    }
+
+    .burgerMenu{
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 6;
+        width: 25px;
+        cursor: pointer;
+        transition: all .1s ease;
+        transform:translateX(0px);
+        .line{
+            background-color: rgb(185, 43, 43);
+            height: 3px;
+            transform: rotate(0deg) translateY(0px);
+            transition: all .15s ease;
+        }
+
+        .l2, .l3{
+            margin-top: 4px;
+        }
+
+        .l1, .l3{
+            margin-left: auto;
+            margin-right: auto;
+            width: 20px;
+        }
+
+        .showb1{
+            transform: rotate(45deg) translateY(10px);
+            width: 23px;
+        }
+        .showb3{
+            transform: rotate(-45deg) translateY(-10px);
+            width: 23px;
+        }
+
+        .showb2{
+            opacity: 0;
+        }
+    }
+
+    .moveb{
+        transform:translateX(5px);
+    }
+
+    .mainNav{
+        opacity: 0;
+        pointer-events: none;
+        position: fixed;
+        top: 55px;
+        left: 0;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,.3);
+        transition: all .3s ease-in-out;
+        transform: translateX(0px);
+
+        
+        
+            .navList{
+                margin-left: auto;
+                width: 100%;
+                padding-bottom: 8px;
+                position: relative;
+                z-index: 1;
+                // height: 265px;
+                box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.2);
+                background-color: rgba(255,255,255,.99);
+                transform: translateY(-12px);
+                transition: all .2s linear;
+
+                
+                .navItem{
+                    font-size: 20px;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    margin: 0 auto;
+                    width: 95%;
+                    font-weight: 700;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+
+                    transition: all .1s ease; 
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    
+
+                    a{
+                        color: rgb(36, 2, 2);
+                        text-decoration: none;
+                        transition: all .15s ease;
+
+                        &:hover{
+                            color: #E02645;
+                        }
+                    }
+                }
+                .serviceBut{
+                    padding-bottom: 5px;
+                    color: rgb(36, 2, 2);
+                    transition: all .15s ease;
+                    cursor: pointer;
+                        &:hover{
+                            color: #E02645;
+                        }
+
+
+                        .fas{
+                            margin-left: 5px;
+                            font-size: 18px;
+                        }
+                }
+                .serviceList{
+                    padding-left: 20px;
+                    padding-bottom: 0;
+                    height: 0;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: padding-bottom .2s ease-in-out, opacity .2s ease-in-out .05s;
+                    li{
+                        font-size: 16px;
+                        font-weight: 700;
+                        margin: 10px 0;
+                    }
+                    a{
+                        color: rgb(36, 2, 2);
+                        text-decoration: none;
+                        &:hover{
+                            color: #E02645;
+                        }
+                    }
+                }
+                .expand{
+                    padding-bottom: 80px;
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+            .show{
+                transform: translateY(0px);
+            }
+    }
+
+    .show{
+        opacity: 1;
+        pointer-events: all;
+        
+    }
+}
+
+
+
+
+@media only screen and (min-width: 920px){
+    .mainHeader{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        height: 80px;
+        .logoDiv{
+            width: max-content;
+            transform: translateY(-3px);
+            .logo{
+                height: 40px;
+                padding-top: 10px;
+            }
+        }
+
+        .burgerMenu{
+            display: none;
+        }
+        .mainNav{
+            opacity: 1;
+            pointer-events: all;
+            position: static;
+            max-width: 800px;
+
+            .navList{
+                box-shadow: none;
+                transform: translateY(0px);
+                height: inherit;
+                padding-bottom: 0;
+                
+
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                .serviceBut{
+                    padding-bottom: 15px;
+                    // padding-top: 16px;
+                    text-align: center;
+                }
+                .serviceList{
+                    // background: rgb(255,255,255);
+                    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 95%, rgba(0,212,255,0) 100%);
+                    position: fixed;
+                    top: 65px;
+                    z-index: 2;
+                    text-align: left;
+                    padding-left: 10px;
+                    padding-right: 15px;
+                    border-radius: 5px;
+                    box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.2);
+                    transition: opacity .28s ease-in-out, padding-bottom .2s ease-in-out, padding-top .2s ease-in-out;
+                    li{
+                        font-size: 18px;
+                        padding: 15px 3px;
+                        margin: 0;
+                        border-top: solid 1px rgb(36, 2, 2);
+                        width: 150px;
+                    }
+                    li:first-child{
+                        border-top: none;
+                        
+                    }
+                }
+                .expand{
+                    padding-top: 0px;
+                    padding-bottom: 165px;
+                    
+                }
+
+                // .currentPage{
+                //     border-bottom: 2px solid rgb(36, 2, 2);
+
+                //     &:hover{
+                //         border-bottom: 2px solid rgb(185, 43, 43);
+                //     }
+                // }
+
+                .navItem{
+                    width: max-content;
+                    border-bottom: solid 3px white;
+                }
+            }
+        }
+    }
+}

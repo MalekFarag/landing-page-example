@@ -1,0 +1,53 @@
+.sentPage{
+    width: 100%;
+    height: 100vh;
+    background: rgb(230,9,67);
+    background: linear-gradient(145deg, rgba(230,9,67,1) 0%, rgb(223, 23, 90) 100%);
+    .sentInfo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: white;
+        text-align: center;
+        width: 100%;
+        font-size: 64px;
+        i{
+            color: white;
+        }
+
+        img{
+            width: 50px;
+        }
+
+        h4{
+            font-size: 42px;
+            width: 100%;
+            max-width: 1000px;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 48px;
+        }
+        p{
+            font-size: 20px;
+            margin-top: 20px;
+            line-height: 30px;
+
+            
+        }
+        
+    }
+    .back{
+        font-size: 18px;
+        color: white;
+
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%) translateY(50%);
+         a{
+            color: white;
+        }
+    }
+   
+}

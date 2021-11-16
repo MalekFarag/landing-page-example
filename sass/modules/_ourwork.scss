@@ -1,0 +1,151 @@
+
+
+.workPage{
+    width: 100%;
+
+    h1{
+        padding-top: 60px;
+    }
+    .subHead{
+        width: 100%;
+        text-align: center;
+        display: block;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .portArea{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 30px auto;
+
+        h2{
+            margin: 0px auto;
+            margin-top: 20px;
+        }
+
+        .connectLine{
+            width: 3px;
+            height: 60px;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        .images{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            width: 99%;
+            max-width: 1400px;
+            padding: 30px 0;
+            .pImage{
+                padding-bottom: 31.9%;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 48%;
+                    margin: 5px 0;
+                    cursor: pointer;
+                    transition: all .1s ease;
+                    &:hover{
+                        opacity: .85;
+                    }
+            }
+        }
+
+        .videos{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 30px 0;
+            .videoDiv{
+                margin: 30px auto;
+                width: 325px;
+                height: 182px;
+            }
+        }
+    }
+    
+}
+
+// video sizing
+@media only screen and (min-width: 525px){
+    .workPage{
+        .portArea{
+            .videos{
+                .videoDiv{
+                    width: 525px;
+                    height: 295px;
+                }
+            }
+        }
+    }
+}
+
+
+
+// end of video sizing
+
+@media only screen and (min-width: 820px){
+    .workPage{
+        .portArea{
+            .images{
+                .pImage{
+                    max-width: 30%;
+                    padding-bottom: 19.98%;
+                }
+            }
+            // .videos{
+            //     .videoDiv{
+            //         width: 820px;
+            //         height: 461px;
+            //     }
+            // }
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    .workPage{
+        .portArea{
+            .images{
+                .pImage{
+                    max-width: 24%;
+                    padding-bottom: 15.98%;
+                }
+            }
+            #wallpapers{
+                .pImage{
+                    max-width: 30%;
+                    padding-bottom: 19.98%;
+                }
+            }
+            
+        }
+    }
+}
+
+
+// video sizing
+@media only screen and (min-width: 1600px){
+    .workPage{
+        .portArea{
+            .videos{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly !important;
+                flex-wrap: nowrap;
+                width: 100%;
+                max-width: 1920px;
+                padding: 0;
+
+                .videoDiv{
+                    width: 525px;
+                    height: 295px;
+                }
+            }
+        }
+    }
+}

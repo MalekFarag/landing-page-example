@@ -1,0 +1,358 @@
+.serveInfoPage{
+    background-repeat: no-repeat;
+    background-size: auto 500px;
+    background-position: center top;
+    .headerLarge{
+        padding-top: 40px;
+        
+    }
+    .subhead{
+        margin-top: 20px;
+        
+    }
+
+    .serviceIcons{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 26px;
+        color: white;
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 50px;
+        .iconDiv{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: .6;
+            cursor: pointer;
+            width: 30%;
+            transition: all .2s ease;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+        .sName{
+            pointer-events: none;
+            text-align: center;
+
+            font-weight: 700;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        .icon{
+            background-color: #d31938;
+            padding: 10px 10px;
+            border-radius: 100%;
+            height: 32px;
+            width: 32px;
+            text-align: center;
+            border: solid 4px rgb(252, 252, 252);
+            margin: 0 auto;
+            .fas, .fab, i{
+                transform: translateY(2px);
+                pointer-events: none;
+            }
+        }
+
+        .hov{
+            opacity: 1;
+        }
+    }
+
+    .serviceInfo{
+        transform: translateY(-30px);
+        background-color: rgb(252, 252, 252);
+        
+        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
+        
+        width: 100vw;
+
+        .info{
+            padding: 50px 0;
+            width: 100%;
+            
+            
+            
+            position: absolute;
+            top: 0;
+            
+            
+            opacity: 0;
+            pointer-events: none;
+
+            transition: opacity .3s ease-in-out, height .3s ease-in-out;
+
+            
+            .headerSmall{
+                text-align: left;
+                font-size: 28px;
+                width: 95%;
+                font-weight: 700;
+                max-width: 1000px;
+            }
+            .copy{
+                width: 95%;
+                max-width: 1000px;
+                font-size: 16px;
+                line-height: 18px;
+                // letter-spacing: 1px;
+                margin: 10px auto;
+            }
+            .listTitle{
+                display: block;
+                font-size: 22px;
+                width: 95%;
+                margin: 0px auto;
+                max-width: 1000px;
+                font-weight: 600;
+                margin-top: 15px;
+            }
+            ul{
+                width: 95%;
+                margin: 00px auto;
+                max-width: 1000px;
+                li{
+                    font-size: 18px;
+                }
+            }
+            .serveImgSlide{
+                // display: flex;
+                // justify-content: space-evenly;
+                // // flex-wrap: wrap;
+
+
+                white-space: nowrap;
+                overflow-x: auto;
+                overflow-y: hidden;
+                
+                margin-top: 20px;
+                width: 100%;
+                // padding: 10px 5px;
+
+                // ::-webkit-scrollbar-thumb{
+                //     max-width: 10px;
+                // }
+            }
+            .serveImg{
+                display: inline-block;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 45%;
+                padding-bottom: 30%;
+                margin: 10px 5px;
+                
+
+                cursor: pointer;
+                transition: all .1s ease-in-out;
+                &:hover{
+                    opacity: .85;
+                }
+            }
+
+            .divLine{
+                margin: 30px auto;
+                width: 3px;
+                height: 160px;
+                background-color: black;
+            }
+
+            .pricing{
+                .headerSmall{
+                    text-align: center;
+                }
+                .price{
+                    background-color: white;
+                    // border-radius: 8px;
+                    width: 100%;
+                    // height: 300px;
+                    margin: 20px auto;
+                    margin-top: 30px;
+                    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.3);
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    // white-space: nowrap;
+                    // overflow-x: auto;
+                    // overflow-y: hidden;
+                    .priceImg{
+                        margin-top: 15px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        // display: inline-block;
+                        // width: 50%;
+                        // max-width: 100%; 
+                        padding-bottom: 60%;
+
+                        cursor: pointer;
+                        transition: all .1s ease-in-out;
+                        &:hover{
+                            opacity: .85;
+                        }
+                    }
+                }
+            }
+        }
+
+        // .info:first-child{
+        //     opacity: 0;
+        //     pointer-events: all;
+        //     position: static;
+        // }
+        .showServe{
+            opacity: 1;
+            pointer-events: all;
+            position: static;
+            margin: 0 auto;
+        }
+    }
+
+    .form{
+        background-color: white;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .serveInfoPage{
+        .serviceInfo{
+            .info{
+                .pricing{
+                    
+
+                    .price{
+                        white-space: normal;
+                        overflow-x: initial;
+                        overflow-y: initial;
+                        border-radius: 8px;
+
+                        display: flex;
+                        justify-content: space-evenly;
+                        width: 80% !important;
+                        max-width: 1200px;
+                        .priceImg{
+                            display: block;
+                            width: 30%;
+                            padding-bottom: 40%;
+                            margin: 20px 0;
+                            margin-top: 30px;
+                        }
+                    }
+
+                    
+
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 920px){
+    .serveInfoPage{
+        background-size: 100%;
+        background-position: center top;
+        padding-top: 160px;
+
+        .headerLarge{
+            font-size: 36px;
+        }
+
+        .serviceIcons{
+            margin-top: 100px;
+            .iconDiv{
+                .sName{
+                    font-size: 14px;
+                    margin-bottom: 13px;
+                }
+            }
+        }
+        .serviceInfo{
+            background-color: rgb(255, 255, 255);
+            border-top: solid #d31938 1px;
+            color: black;
+            .info{
+                h3{
+                    font-size: 32px !important;
+                }
+    
+                .copy{
+                    font-size: 20px;
+                    line-height: 22px;
+                }
+                .divLine{
+                    display: none;
+                }
+               .serveImgSlide{
+                    margin: 50px 0;
+                    padding: 20px 50px;
+                    width: auto;
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    text-align: center;
+                    background-color: rgb(238, 238, 238);
+                    // border-radius: 8px;
+                    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.2);
+                .serveImg{
+                    width: 350px;
+                    padding-bottom: 230px;
+                }
+                } 
+                .webImgs{
+                    .serveImg{
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    #app{
+        #branding{
+            background-position: center -150px;
+        }
+    }   
+}
+
+@media only screen and (min-width: 1920px){
+    #app{
+
+        #branding{
+            background-position: center -300px;
+        }
+    }
+    
+}
+
+//video sizing
+.videos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1900px; 
+    margin: 20px auto;
+    .videoDiv{
+        margin: 30px auto;
+        width: 325px;
+        height: 182px;
+    }
+}
+
+@media only screen and (min-width: 525px){
+    .videos{
+        .videoDiv{
+            width: 525px;
+            height: 295px;
+            }
+        }
+}

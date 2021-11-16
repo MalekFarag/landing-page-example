@@ -1,0 +1,123 @@
+.storePage{
+    .bisDesc{
+        margin: 20px auto;
+
+        font-size: 18px;
+        text-align: center;
+        
+    }
+
+    .divLine{
+        background-color: black;
+        width: 3px;
+        height: 150px;
+        margin: 40px auto;
+    }
+
+    .please{
+        text-align: center;
+        font-weight: 800;
+        margin-top: 30px;
+    }
+
+    .form{
+        margin: 20px auto;
+        text-align: center;
+
+        .checkList{
+            display: flex;
+            flex-direction: column;
+            
+            width: max-content;
+            margin: 0 auto;
+
+            .check{
+                margin-top: 10px;
+                text-align: left;
+                font-size: 18px;
+                // letter-spacing: 1px;
+                input{
+                    zoom: 1.2;
+                    transform: scale(1.2);
+                    margin-right: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .inputArea{
+            display: flex;
+            flex-direction: column;
+            
+            width: 65%;
+            margin: 20px auto;
+            text-align: left;
+
+
+            input{
+                height: 22px;
+            }
+
+            label{
+                font-weight: 800;
+                margin-top: 15px;
+                font-size: 14px;
+            }
+
+            input, textarea{
+                padding: 5px 10px;
+                font-family: 'Open Sans', sans-serif;
+                border: 1px solid rgba(0, 0, 0, 0.397);
+                border-radius: 3px;
+                margin-top: 8px;
+            }
+
+            textarea{
+                resize: vertical;
+                height: 150px;
+            }
+        }
+
+        #allow{
+            cursor: pointer; 
+        }
+
+        .submit{
+            display: block;
+            height: 45px;
+            width: 110px;
+            font-size: 16px;
+            font-family: 'Open Sans', sans-serif;
+            border: none;
+            background-color: #e20f41;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 20px auto;
+
+            transition: all .1s ease;
+
+            &:hover{
+                background-color: #e20f41;
+                transform: scale(1.05);
+            }
+        }
+        
+    }
+
+    .errmsg{
+        display: block;
+        padding: 20px auto;
+        margin: 20px auto;
+        background-color: rgb(202, 74, 74);
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 920px){
+    .storePage{
+        .headerLarge{
+            padding-top: 60px;
+        }
+    }
+}
